@@ -61,7 +61,7 @@ return {
 				},
 				{
 					action = "Oil " .. vim.fn.stdpath("config"),
-					desc = " Telescope config files",
+					desc = " Config",
 					icon = " ",
 					key = "c",
 				},

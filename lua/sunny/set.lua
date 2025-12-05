@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -27,9 +29,7 @@ local signs = {
 
 vim.diagnostic.config({
 	virtual_text = {
-		prefix = function(diagnostic)
-			return signs[vim.diagnostic.severity[diagnostic.severity]]
-		end,
+		prefix = "",
 	},
 	severity_sort = true,
 	signs = {
@@ -39,9 +39,9 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.HINT] = signs.HINT,
 			[vim.diagnostic.severity.INFO] = signs.INFO,
 		},
-		linehl = {
-			[vim.diagnostic.severity.ERROR] = "ErrorMsg",
-		},
+		-- linehl = {
+		-- 	[vim.diagnostic.severity.ERROR] = "ErrorMsg",
+		-- },
 		numhl = {
 			[vim.diagnostic.severity.WARN] = "WarningMsg",
 		},
