@@ -59,6 +59,12 @@ return {
 					icon = " ",
 					key = "g",
 				},
+				{
+					action = "Oil " .. vim.fn.stdpath("config"),
+					desc = " Telescope config files",
+					icon = " ",
+					key = "c",
+				},
 				-- { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = "󰜉 ", key = "s" },
 				{
 					action = "Lazy",

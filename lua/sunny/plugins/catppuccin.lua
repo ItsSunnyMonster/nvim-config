@@ -18,6 +18,7 @@ return {
 				RainbowViolet = { fg = colors.mauve },
 				RainbowCyan = { fg = colors.sky },
 				DashboardHeader = { fg = colors.red },
+				SkActive = { bg = colors.pink, fg = colors.mantle },
 			}
 		end,
 		integrations = {
