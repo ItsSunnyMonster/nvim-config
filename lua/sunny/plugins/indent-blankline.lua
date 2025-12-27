@@ -1,6 +1,7 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
+	dependencies = "HiPhish/rainbow-delimiters.nvim",
 	---@module "ibl"
 	---@type ibl.config
 	opts = {
@@ -36,4 +37,8 @@ return {
 			},
 		},
 	},
+	config = function(_, opts)
+		vim.g.rainbow_delimiters = { highlight = opts.scope.highlight }
+		require("ibl").setup(opts)
+	end,
 }
