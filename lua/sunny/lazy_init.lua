@@ -1,3 +1,7 @@
+-- SPDX-FileCopyrightText: 2025 SunnyMonster
+--
+-- SPDX-License-Identifier: CC-BY-SA-4.0
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({

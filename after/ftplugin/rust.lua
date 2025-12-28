@@ -1,3 +1,7 @@
+-- SPDX-FileCopyrightText: 2025 SunnyMonster
+--
+-- SPDX-License-Identifier: CC-BY-SA-4.0
+
 local bufnr = vim.api.nvim_get_current_buf()
 vim.keymap.set("n", "<leader>a", function()
 	vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
