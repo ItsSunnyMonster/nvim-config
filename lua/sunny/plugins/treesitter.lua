@@ -2,25 +2,39 @@
 --
 -- SPDX-License-Identifier: CC-BY-SA-4.0
 
+local treesitterLanguages = {
+	"rust",
+	"c",
+	"markdown",
+	"markdown_inline",
+	"javascript",
+	"jsx",
+	"typescript",
+	"tsx",
+	"html",
+	"css",
+	"scss",
+	"lua",
+}
+
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master",
+	branch = "main",
 	lazy = false,
 	build = ":TSUpdate",
-	opts = {
-		ensure_installed = { "lua", "rust", "zig", "c", "cpp", "markdown", "markdown_inline" },
-		highlight = {
-			enable = true,
-			-- disable = function(_, buf)
-			-- 	local max_filesize = 100 * 1024 -- 100 KB
-			-- 	local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-			-- 	if ok and stats and stats.size > max_filesize then
-			-- 		return true
-			-- 	end
-			-- end,
-		},
-	},
-	config = function(_, opts)
-		require("nvim-treesitter.configs").setup(opts)
+	config = function(_, _)
+		require("nvim-treesitter").install(treesitterLanguages)
+	end,
+	init = function(_)
+		vim.api.nvim_create_autocmd("FileType", {
+			group = vim.api.nvim_create_augroup("EnableTreesitterHighlighting", { clear = true }),
+			desc = "Try to enable tree-sitter syntax highlighting",
+			pattern = "*", -- run on *all* filetypes
+			callback = function()
+				pcall(function()
+					vim.treesitter.start()
+				end)
+			end,
+		})
 	end,
 }
