@@ -4,10 +4,10 @@
 
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "v0.2.0",
-	dependencies = { "nvim-lua/plenary.nvim", "folke/which-key.nvim" },
+	dependencies = { "nvim-lua/plenary.nvim", "folke/which-key.nvim", "nvim-telescope/telescope-fzf-native.nvim" },
 	init = function()
 		require("which-key").add({ { "<leader>f", group = "Telescope find" } })
+		require("telescope").load_extension("fzf")
 	end,
 	keys = {
 		{
