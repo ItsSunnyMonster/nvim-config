@@ -24,7 +24,11 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function(_, _)
-		require("nvim-treesitter").install(treesitterLanguages)
+		local installed = require("nvim-treesitter.config").get_installed()
+		local toInstall = vim.tbl_filter(function(lang)
+			return not vim.tbl_contains(installed, lang)
+		end, treesitterLanguages)
+		require("nvim-treesitter").install(toInstall)
 	end,
 	init = function(_)
 		vim.api.nvim_create_autocmd("FileType", {
@@ -34,6 +38,7 @@ return {
 			callback = function()
 				pcall(function()
 					vim.treesitter.start()
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 				end)
 			end,
 		})
