@@ -1,6 +1,6 @@
--- SPDX-FileCopyrightText: 2025 SunnyMonster
+-- SPDX-FileCopyrightText: 2025, 2026 SunnyMonster
 --
--- SPDX-License-Identifier: CC-BY-SA-4.0
+-- SPDX-License-Identifier: MIT
 
 local bufnr = vim.api.nvim_get_current_buf()
 vim.keymap.set("n", "<leader>a", function()

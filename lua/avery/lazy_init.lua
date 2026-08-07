@@ -1,6 +1,6 @@
--- SPDX-FileCopyrightText: 2025 SunnyMonster
+-- SPDX-FileCopyrightText: 2025, 2026 SunnyMonster
 --
--- SPDX-License-Identifier: CC-BY-SA-4.0
+-- SPDX-License-Identifier: MIT
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: NONE
 #
-# SPDX-License-Identifier: CC0-1.0
+# SPDX-License-Identifier: Unlicense
 
 repos:
   - repo: https://codeberg.org/fsfe/reuse-tool
