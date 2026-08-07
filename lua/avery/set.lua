@@ -21,8 +21,6 @@ vim.opt.wrap = false
 
 vim.opt.signcolumn = "yes"
 
-vim.opt.smartindent = false
-
 vim.lsp.inlay_hint.enable(true)
 
 local signs = {
