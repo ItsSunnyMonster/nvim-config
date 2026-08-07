@@ -7,7 +7,7 @@ return {
 	build = ":Cord update",
 	opts = {
 		display = {
-			theme = "catppuccin",
+			theme = "minecraft",
 		},
 		buttons = {
 			{

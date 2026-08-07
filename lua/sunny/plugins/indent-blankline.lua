@@ -11,13 +11,13 @@ return {
 	opts = {
 		scope = {
 			highlight = {
-				"RainbowRed",
-				"RainbowYellow",
-				"RainbowBlue",
-				"RainbowOrange",
-				"RainbowGreen",
-				"RainbowViolet",
-				"RainbowCyan",
+				"RainbowDelimiterRed",
+				"RainbowDelimiterYellow",
+				"RainbowDelimiterBlue",
+				"RainbowDelimiterOrange",
+				"RainbowDelimiterGreen",
+				"RainbowDelimiterViolet",
+				"RainbowDelimiterCyan",
 			},
 			show_start = false,
 			show_end = false,

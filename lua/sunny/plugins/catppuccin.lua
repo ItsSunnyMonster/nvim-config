@@ -7,20 +7,20 @@ return {
 	name = "catppuccin",
 	priority = 1000,
 	init = function()
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme("catppuccin-nvim")
 	end,
 	opts = {
 		custom_highlights = function(colors)
 			return {
 				FloatBorder = { fg = colors.pink },
 				BlinkCmpMenuBorder = { fg = colors.pink },
-				RainbowRed = { fg = colors.red },
-				RainbowYellow = { fg = colors.yellow },
-				RainbowBlue = { fg = colors.blue },
-				RainbowOrange = { fg = colors.peach },
-				RainbowGreen = { fg = colors.green },
-				RainbowViolet = { fg = colors.mauve },
-				RainbowCyan = { fg = colors.sky },
+				RainbowDelimiterRed = { fg = colors.red },
+				RainbowDelimiterYellow = { fg = colors.yellow },
+				RainbowDelimiterBlue = { fg = colors.blue },
+				RainbowDelimiterOrange = { fg = colors.peach },
+				RainbowDelimiterGreen = { fg = colors.green },
+				RainbowDelimiterViolet = { fg = colors.mauve },
+				RainbowDelimiterCyan = { fg = colors.sky },
 				DashboardHeader = { fg = colors.red },
 				SkActive = { bg = colors.pink, fg = colors.mantle },
 			}

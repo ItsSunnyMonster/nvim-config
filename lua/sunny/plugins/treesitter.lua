@@ -15,6 +15,7 @@ local treesitterLanguages = {
 	"css",
 	"scss",
 	"lua",
+	"astro",
 }
 
 return {
