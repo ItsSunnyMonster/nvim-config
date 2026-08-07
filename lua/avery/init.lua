@@ -2,7 +2,7 @@
 --
 -- SPDX-License-Identifier: CC-BY-SA-4.0
 
-require("sunny.set")
-require("sunny.lazy_init")
-require("sunny.remap")
-require("sunny.autocmd")
+require("avery.set")
+require("avery.lazy_init")
+require("avery.remap")
+require("avery.autocmd")

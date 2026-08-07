@@ -16,7 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	spec = "sunny.plugins",
+	spec = "avery.plugins",
 	change_detection = {
 		notify = false,
 	},
